@@ -8,9 +8,9 @@ node(){
    stage("Maven Build"){
    sh "mvn package"
    } 
-  // stage("Upload to nexus"){
-   //nexusArtifactUploader artifacts: [[artifactId: '$BUILD_ID', classifier: '', file: 'target/RentalCars.war', type: 'war']], 
-   //credentialsId: 'nexusrepologin', groupId: 'prod', nexusUrl: '35.174.204.118:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'devtest1', version: '$BUILD_ID'
+   stage("Upload to nexus"){
+   nexusArtifactUploader artifacts: [[artifactId: '$BUILD_ID', classifier: '', file: 'target/RentalCars.war', type: 'war']], 
+   credentialsId: 'nexusrepologin', groupId: 'prod', nexusUrl: '3.238.253.14:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'repo6test', version: '$BUILD_ID'
   
- // }
+  }
 }
