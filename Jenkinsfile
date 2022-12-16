@@ -18,5 +18,5 @@ node(){
    nexusArtifactUploader artifacts: [[artifactId: '$BUILD_ID', classifier: '', file: 'target/RentalCars.war', type: 'war']], 
    credentialsId: 'nexusrepologin', groupId: 'prod', nexusUrl: '35.168.36.98:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'repo6test', version: '$BUILD_ID'
   
-  //}
+  }
 }
